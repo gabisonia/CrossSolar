@@ -44,10 +44,10 @@ namespace CrossSolar.Tests.MockedRepositories
             return Task.FromResult(_dayAnalyticsData);
         }
 
-        public Task InsertAsync(OneDayElectricityModel entity)
+        public Task<int> InsertAsync(OneDayElectricityModel entity)
         {
             _dayAnalyticsData.Add(entity);
-            return Task.CompletedTask;
+            return Task.FromResult(1);
         }
 
         public IQueryable<OneDayElectricityModel> Query()

@@ -48,7 +48,7 @@ namespace CrossSolar.Tests.MockedRepositories
             return Task.FromResult(_panelsList.Where(x => x.Id == id).SingleOrDefault());
         }
 
-        public Task InsertAsync(Panel entity)
+        public Task<int> InsertAsync(Panel entity)
         {
             _panelsList.Add(entity);
 

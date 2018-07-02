@@ -52,7 +52,7 @@ namespace CrossSolar.Tests.MockedRepositories
             return Task.FromResult(_analiticsData.Where(x => x.PanelId == panelId).ToList());
         }
 
-        public Task InsertAsync(OneHourElectricity entity)
+        public Task<int> InsertAsync(OneHourElectricity entity)
         {
             _analiticsData.Add(entity);
 
